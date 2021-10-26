@@ -11,6 +11,7 @@ const AppProvider = ({ children }) => {
   const [query, setQuery] = useState('');
 
   const fetchMovies = async (url) => {
+    console.log(REACT_APP_BASE_URL);
     setIsLoading(true);
     try {
       const response = await fetch(url);
