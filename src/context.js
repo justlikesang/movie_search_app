@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
-export const SERVER_ENDPOINT = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
+export const SERVER_ENDPOINT =
+  process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
 
 const AppContext = React.createContext();
 
@@ -11,7 +12,7 @@ const AppProvider = ({ children }) => {
   const [query, setQuery] = useState('');
 
   const fetchMovies = async (url) => {
-    console.log(REACT_APP_BASE_URL);
+    console.log(SERVER_ENDPOINT);
     setIsLoading(true);
     try {
       const response = await fetch(url);

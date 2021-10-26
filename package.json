@@ -22,7 +22,7 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:5001",
-  "homepage" : "https://movie-app-backend-api-01.herokuapp.com/",
+  "homepage" : "https://movie-app-backend-api-01.herokuapp.com",
   "eslintConfig": {
     "extends": [
       "react-app",
