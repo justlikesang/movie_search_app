@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
+export const SERVER_ENDPOINT = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
 
 const AppContext = React.createContext();
 
@@ -14,6 +15,7 @@ const AppProvider = ({ children }) => {
     try {
       const response = await fetch(url);
       const data = await response.json();
+      // console.log(data);
 
       if (data.Response === 'True') {
         setMovies(data.Search);

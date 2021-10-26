@@ -300,12 +300,29 @@ Single Movie
     /* background-color: var(--clr-primary-5); */
 }
 
-.likes-show {
+.likes-dislikes-container {
+    display: flex;
+}
+
+.active-btn {
+    color: var(--clr-primary-2);
+}
+
+.likes-container {
     display: flex;
     width: 3rem;
     height: 3rem;
     font-size: 1rem;
     align-items: center;
+}
+
+.dislikes-container {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    align-items: center;
+    margin-left: 2rem;
 }
 
 .likes-show span {
